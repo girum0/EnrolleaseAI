@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EnrollEase AI – AI Automation for Clinical Trial Sites</title>
+    <style>
+      /* Base resets */
+      body, h1, h2, h3, p, ul { margin: 0; padding: 0; }
+      body { font-family: "Poppins", sans-serif; color: #333; background-color: #f8f9fa; line-height: 1.6; }
+      a { color: #1d6fa5; text-decoration: none; }
+      nav { background: #ffffff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
+      .container { width: 90%; max-width: 1080px; margin: 0 auto; }
+      /* Hero */
+      .hero { height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; background: linear-gradient(135deg, #1d6fa5cc 0%, #ffffff 100%); text-align: center; padding: 2rem; }
+      .hero h1 { font-size: 3rem; color: #1d6fa5; margin-bottom: 1rem; }
+      .hero p { font-size: 1.25rem; max-width: 600px; margin-bottom: 2rem; }
+      .cta-button { background: #1d6fa5; color: #fff; border: none; padding: 1rem 2rem; font-size: 1rem; cursor: pointer; border-radius: 4px; transition: background 0.3s ease; }
+      .cta-button:hover { background: #155a85; }
+      /* Sections */
+      section { padding: 4rem 0; }
+      h2 { font-size: 2rem; color: #1d6fa5; margin-bottom: 1rem; }
+      p { margin-bottom: 1.5rem; }
+      .features, .services, .pricing { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+      .card { background: #fff; border-radius: 6px; padding: 1.5rem; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+      .card h3 { margin-bottom: 0.5rem; color: #155a85; }
+      /* Pricing */
+      .pricing { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+      .price-card { border: 2px solid #1d6fa5; }
+      .price-card h3 { color: #1d6fa5; }
+      .price-card button { margin-top: 1rem; }
+      /* Contact */
+      form { background: #fff; padding: 2rem; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+      input, textarea { width: 100%; padding: 0.75rem; margin-bottom: 1rem; border: 1px solid #ccc; border-radius: 4px; }
+      button[type="submit"] { background: #1d6fa5; color: #fff; border: none; padding: 0.75rem 1.5rem; font-size: 1rem; cursor: pointer; border-radius: 4px; transition: background 0.3s ease; }
+      button[type="submit"]:hover { background: #155a85; }
+      /* Footer */
+      footer { background: #ffffff; text-align: center; padding: 2rem 0; font-size: 0.9rem; color: #777; }
+    </style>
+  </head>
+  <body>
+    <nav class="container">
+      <ul style="display:flex; gap:2rem; padding:1rem 0; list-style:none; justify-content:center;">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section id="hero" class="hero">
+      <h1>EnrollEase AI</h1>
+      <p>AI-Powered Automations for Clinical Trial Sites. Fill trials faster and reduce no-shows with HIPAA-compliant bots, SMS reminders, and scheduling workflows.</p>
+      <button class="cta-button" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Schedule a Demo</button>
+    </section>
+
+    <section id="services" class="container services">
+      <div class="card">
+        <h3>AI Prescreening Bot</h3>
+        <p>Automate eligibility checks via HIPAA-compliant SMS or web chat. Qualified leads flow directly into your dashboard.</p>
+      </div>
+      <div class="card">
+        <h3>Appointment Scheduling</h3>
+        <p>Integrate Calendly or Google Calendar so patients self-book, cutting admin time and errors to zero.</p>
+      </div>
+      <div class="card">
+        <h3>No-Show Reducer</h3>
+        <p>Automated SMS/email reminders and follow-ups to slash no-shows by up to 38% and boost retention.</p>
+      </div>
+      <div class="card">
+        <h3>Automated Billing Alerts</h3>
+        <p>Trigger invoices and payment reminders through Stripe/Mailgun—smart follow-ups until payment arrives.</p>
+      </div>
+    </section>
+
+    <section id="pricing" class="container pricing">
+      <div class="card price-card">
+        <h3>Starter</h3>
+        <p>Ideal for single-study sites</p>
+        <ul>
+          <li>Setup: AI Prescreening Bot</li>
+          <li>SMS Reminders (up to 500 msgs/mo)</li>
+          <li>Email Alerts & Reporting</li>
+        </ul>
+        <p><strong>Setup: $1,500</strong></p>
+        <p><strong>Monthly: $500</strong></p>
+        <button>Get Started</button>
+      </div>
+      <div class="card price-card">
+        <h3>Growth</h3>
+        <p>Multiple concurrent studies</p>
+        <ul>
+          <li>Everything in Starter</li>
+          <li>Advanced Dashboard</li>
+          <li>Priority Support</li>
+        </ul>
+        <p><strong>Setup: $2,000</strong></p>
+        <p><strong>Monthly: $800</strong></p>
+        <button>Get Started</button>
+      </div>
+    </section>
+
+    <section id="contact" class="container">
+      <h2>Contact Us</h2>
+      <p>Ready to optimize your trial site? Tell us about your needs, and we'll be in touch within 24 hours.</p>
+      <form action="#" method="post">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Describe your automation needs" rows="4" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <footer>
+      &copy; 2025 EnrollEase AI. HIPAA-Compliant. All rights reserved.
+    </footer>
+
+  </body>
+</html>
